@@ -1,0 +1,601 @@
+-- GUI:
+
+-- This is Sky Hub Beta PetSimX
+
+--Credit Wanz_20#3973
+print("Sky Hub Beta PetSimX : Launch!")
+
+local ScreenGUI = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local home = Instance.new("TextButton")
+local hometab = Instance.new("Frame")
+local PlayerImage = Instance.new("ImageLabel")
+local welcometo = Instance.new("TextLabel")
+local credit = Instance.new("TextLabel")
+local planetegg = Instance.new("TextButton")
+local eventegg = Instance.new("TextButton")
+local stopegg = Instance.new("TextButton")
+local hauntedegg = Instance.new("TextButton")
+local hellegg = Instance.new("TextButton")
+local autofarm1 = Instance.new("TextButton")
+local stopfarm1 = Instance.new("TextButton")
+local autofarm2 = Instance.new("TextButton")
+local stopfarm2 = Instance.new("TextButton")
+local autocollect = Instance.new("TextButton")
+local autolootbag = Instance.new("TextButton")
+local antiafk = Instance.new("TextButton")
+local antilag = Instance.new("TextButton")
+local gamepassed = Instance.new("TextButton")
+local hyperhub = Instance.new("TextButton")
+local dinohub = Instance.new("TextButton")
+local bar = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local scriptspage = Instance.new("Frame")
+local scripts = Instance.new("TextButton")
+local hubspage = Instance.new("Frame")
+local hubs = Instance.new("TextButton")
+local exit = Instance.new("TextButton")
+local open = Instance.new("TextButton")
+
+--main:
+
+ScreenGUI.Name = "ScreenGUI"
+ScreenGUI.Parent = game.CoreGui
+ScreenGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGUI
+main.BackgroundColor3 = Color3.fromRGB(12, 12, 12)
+main.Position = UDim2.new(0.288126051, 0, 0.278999169, 0)
+main.Size = UDim2.new(0, 488, 0, 280)
+main.Active = true
+main.Draggable = true
+main.Visible = false
+
+home.Name = "home"
+home.Parent = main
+home.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+home.BorderSizePixel = 0
+home.Position = UDim2.new(0, 0, 0.114285722, 0)
+home.Size = UDim2.new(0, 150, 0, 34)
+home.Font = Enum.Font.Ubuntu
+home.Text = "Info"
+home.TextColor3 = Color3.fromRGB(255, 255, 255)
+home.TextSize = 14.000
+
+open.Name = "open"
+open.Parent = ScreenGUI
+open.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0.69262296, 0, 0.114285722, 0)
+open.Size = UDim2.new(0.13262296, 0, 0.103285722, 0)
+open.Font = Enum.Font.Ubuntu
+open.Text = "[Open]"
+open.TextColor3 = Color3.fromRGB(0, 255, 0)
+open.TextSize = 14.000
+open.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = true
+open.Visible = false
+end)
+
+exit.Name = "exit"
+exit.Parent = main
+exit.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+exit.BorderSizePixel = 0
+exit.Position = UDim2.new(0.69262296, 0, 0.114285722, 0)
+
+exit.Size = UDim2.new(0, 150, 0, 34)
+exit.Font = Enum.Font.Ubuntu
+exit.Text = "Exit"
+exit.TextColor3 = Color3.fromRGB(255, 0, 0)
+exit.TextSize = 14.000
+exit.MouseButton1Down:connect(function()
+game.CoreGui.ScreenGUI.main.Visible = false
+game.CoreGui.ScreenGUI.open.Visible = true
+end)
+
+scripts.Name = "scripts"
+scripts.Parent = main
+scripts.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+scripts.BorderSizePixel = 0
+scripts.Position = UDim2.new(0.34631148, 0, 0.114285722, 0)
+scripts.Size = UDim2.new(0, 150, 0, 34)
+scripts.Font = Enum.Font.Ubuntu
+scripts.Text = "Scripts"
+scripts.TextColor3 = Color3.fromRGB(255, 255, 255)
+scripts.TextSize = 14.000
+
+hometab.Name = "hometab"
+hometab.Parent = main
+hometab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hometab.BackgroundTransparency = 1.000
+hometab.Position = UDim2.new(0, 0, 0.235714287, 0)
+hometab.Size = UDim2.new(0, 488, 0, 214)
+hometab.Visible = false
+
+
+welcometo.Name = "welcometo"
+welcometo.Parent = hometab
+welcometo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+welcometo.BackgroundTransparency = 1.000
+welcometo.BorderSizePixel = 0
+welcometo.Position = UDim2.new(0.200819671, 0, 0.397196293, 0)
+welcometo.Size = UDim2.new(0, 291, 0, 50)
+welcometo.Font = Enum.Font.TitilliumWeb
+welcometo.Text = "Welcome to Sky Hub Beta Version"
+welcometo.TextColor3 = Color3.fromRGB(255, 255, 255)
+welcometo.TextScaled = true
+welcometo.TextSize = 14.000
+welcometo.TextWrapped = true
+
+credit.Name = "credit"
+credit.Parent = hometab
+credit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+credit.BackgroundTransparency = 1.000
+credit.BorderSizePixel = 0
+credit.Position = UDim2.new(0.190573767, 0, 0.598130822, 0)
+credit.Size = UDim2.new(0, 299, 0, 64)
+credit.Font = Enum.Font.TitilliumWeb
+credit.Text = "SKY HUB beta Created by Skylar, Discord : Wanz_20#3973"
+credit.TextColor3 = Color3.fromRGB(0, 255, 255)
+credit.TextScaled = true
+credit.TextSize = 14.000
+credit.TextWrapped = true
+
+scriptspage.Name = "scriptspage"
+scriptspage.Parent = main
+scriptspage.Active = true
+scriptspage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scriptspage.BackgroundTransparency = 1.000
+scriptspage.Position = UDim2.new(0, 0, 0.235714287, 0)
+scriptspage.Size = UDim2.new(0, 488, 0, 214)
+scriptspage.Visible = false
+
+planetegg.Name = "planetegg"
+planetegg.Parent = scriptspage
+planetegg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+planetegg.Position = UDim2.new(0, 0, 0.0794392526, 0)
+planetegg.Size = UDim2.new(0, 150, 0, 34)
+planetegg.Font = Enum.Font.SourceSans
+planetegg.Text = "Planet Egg"
+planetegg.TextColor3 = Color3.fromRGB(255, 255, 255)
+planetegg.TextSize = 18.000
+planetegg.MouseButton1Down:connect(function()
+	local eggName="Planet Egg"
+    local TripleHatch=true
+    _G.Stop=false
+
+
+    local eggRemote=game: GetService ("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+
+    while wait () do
+        eggRemote:InvokeServer({eggName, TripleHatch})
+        if _G.Stop then
+            break
+        end
+    end
+end)
+
+eventegg.Name = "eventegg"
+eventegg.Parent = scriptspage
+eventegg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+eventegg.Position = UDim2.new(0, 0, 0.266355157, 0)
+eventegg.Size = UDim2.new(0, 150, 0, 34)
+eventegg.Font = Enum.Font.SourceSans
+eventegg.Text = "Chrismast Egg"
+eventegg.TextColor3 = Color3.fromRGB(255, 255, 255)
+eventegg.TextSize = 18.000
+eventegg.MouseButton1Down:connect(function()
+	local eggName="Egg of Many Gifts"
+    local TripleHatch=true
+    _G.Stop=false
+
+
+    local eggRemote=game: GetService ("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+
+    while wait () do
+        eggRemote:InvokeServer({eggName, TripleHatch})
+        if _G.Stop then
+            break
+        end
+    end
+end)
+
+stopegg.Name = "stopegg"
+stopegg.Parent = scriptspage
+stopegg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+stopegg.Position = UDim2.new(0, 0, 0.457944006, 0)
+stopegg.Size = UDim2.new(0, 150, 0, 34)
+stopegg.Font = Enum.Font.SourceSans
+stopegg.Text = "Stop Hatch Egg"
+stopegg.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopegg.TextSize = 18.000
+stopegg.MouseButton1Down:connect(function()
+	local eggName="Egg of Many Gifts"
+    local TripleHatch=true
+    _G.Stop=true
+
+
+    local eggRemote=game: GetService ("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+
+    while wait () do
+        eggRemote:InvokeServer({eggName, TripleHatch})
+        if _G.Stop then
+            break
+        end
+    end
+end)
+
+hauntedegg.Name = "hauntedegg"
+hauntedegg.Parent = scriptspage
+hauntedegg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+hauntedegg.Position = UDim2.new(0, 0, 0.658878565, 0)
+hauntedegg.Size = UDim2.new(0, 150, 0, 34)
+hauntedegg.Font = Enum.Font.SourceSans
+hauntedegg.Text = "Haunted Egg"
+hauntedegg.TextColor3 = Color3.fromRGB(255, 255, 255)
+hauntedegg.TextSize = 18.000
+hauntedegg.MouseButton1Down:connect(function()
+	local eggName="Haunted Egg"
+    local TripleHatch=true
+    _G.Stop=false
+
+
+    local eggRemote=game: GetService ("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+
+    while wait () do
+        eggRemote:InvokeServer({eggName, TripleHatch})
+        if _G.Stop then
+            break
+        end
+    end
+end)
+
+hellegg.Name = "hellegg"
+hellegg.Parent = scriptspage
+hellegg.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+hellegg.Position = UDim2.new(0.34631148, 0, 0.079439342, 0)
+hellegg.Size = UDim2.new(0, 150, 0, 34)
+hellegg.Font = Enum.Font.SourceSans
+hellegg.Text = "Hell Egg"
+hellegg.TextColor3 = Color3.fromRGB(255, 255, 255)
+hellegg.TextSize = 18.000
+hellegg.MouseButton1Down:connect(function()
+	local eggName="Hell Egg"
+    local TripleHatch=true
+    _G.Stop=false
+
+
+    local eggRemote=game: GetService ("Workspace")["__THINGS"]["__REMOTES"]["buy egg"]
+
+    while wait () do
+        eggRemote:InvokeServer({eggName, TripleHatch})
+        if _G.Stop then
+            break
+        end
+    end
+end)
+
+autofarm1.Name = "autofarm1"
+autofarm1.Parent = scriptspage
+autofarm1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+autofarm1.Position = UDim2.new(0.34631148, 0, 0.261682332, 0)
+autofarm1.Size = UDim2.new(0, 150, 0, 34)
+autofarm1.Font = Enum.Font.SourceSans
+autofarm1.Text = "Auto Farm 1"
+autofarm1.TextColor3 = Color3.fromRGB(255, 255, 255)
+autofarm1.TextSize = 18.000
+autofarm1.MouseButton1Down:connect(function()
+	_G.autofarm = true
+	
+		while _G.autofarm do wait()
+			local dist = math.huge
+			local target = nil
+			for i,v1 in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets:GetChildren()) do
+				for i,v in pairs(game:GetService("Workspace")["__THINGS"].Coins:GetChildren()) do
+					if v1.ClassName == "TextButton" then
+						if v.ClassName == "Folder" then
+							if v:FindFirstChild("Coin") then
+								if v.Coin.Transparency == 0 then
+									local magnitude = (v.Coin.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
+									if magnitude < dist then
+										dist = magnitude
+										target = v.Name
+										workspace.__THINGS.__REMOTES["join coin"]:InvokeServer({tostring(target),{tostring(v1.Name)}})
+										workspace.__THINGS.__REMOTES["farm coin"]:FireServer({tostring(target),tostring(v1.Name)})
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+end)
+
+stopfarm1.Name = "stopfarm1"
+stopfarm1.Parent = scriptspage
+stopfarm1.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+stopfarm1.Position = UDim2.new(0.34631148, 0, 0.453271121, 0)
+stopfarm1.Size = UDim2.new(0, 150, 0, 34)
+stopfarm1.Font = Enum.Font.SourceSans
+stopfarm1.Text = "Auto Farm 1 Stop"
+stopfarm1.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopfarm1.TextSize = 18.000
+stopfarm1.MouseButton1Down:connect(function()
+	_G.autofarm = false
+	
+		while _G.autofarm do wait()
+			local dist = math.huge
+			local target = nil
+			for i,v1 in pairs(game:GetService("Players").LocalPlayer.PlayerGui.Inventory.Frame.Main.Pets:GetChildren()) do
+				for i,v in pairs(game:GetService("Workspace")["__THINGS"].Coins:GetChildren()) do
+					if v1.ClassName == "TextButton" then
+						if v.ClassName == "Folder" then
+							if v:FindFirstChild("Coin") then
+								if v.Coin.Transparency == 0 then
+									local magnitude = (v.Coin.Position - game:GetService("Players").LocalPlayer.Character.Head.Position).magnitude
+									if magnitude < dist then
+										dist = magnitude
+										target = v.Name
+										workspace.__THINGS.__REMOTES["join coin"]:InvokeServer({tostring(target),{tostring(v1.Name)}})
+										workspace.__THINGS.__REMOTES["farm coin"]:FireServer({tostring(target),tostring(v1.Name)})
+									end
+								end
+							end
+						end
+					end
+				end
+			end
+		end
+end)
+
+autofarm2.Name = "autofarm2"
+autofarm2.Parent = scriptspage
+autofarm2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+autofarm2.Position = UDim2.new(0.34631151, 0, 0.658878565, 0)
+autofarm2.Size = UDim2.new(0, 150, 0, 34)
+autofarm2.Font = Enum.Font.SourceSans
+autofarm2.Text = "Auto Farm 2"
+autofarm2.TextColor3 = Color3.fromRGB(255, 255, 255)
+autofarm2.TextSize = 18.000
+autofarm2.MouseButton1Down:connect(function()
+	_G.Stop = false -- false = script is on; true = script is off
+    _G.World = "Tech" -- Worlds: "Fantasy" & "Spawn"
+    _G.Area = "Alien Forest" -- See the above comment and select something..
+    loadstring(game:HttpGet('https://pastebin.com/raw/aFAZb8wz'))()
+end)
+
+stopfarm2.Name = "stopfarm2"
+stopfarm2.Parent = scriptspage
+stopfarm2.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+stopfarm2.Position = UDim2.new(0.678278685, 0, 0.0747664422, 0)
+stopfarm2.Size = UDim2.new(0, 150, 0, 34)
+stopfarm2.Font = Enum.Font.SourceSans
+stopfarm2.Text = "Auto Farm 2 Stop"
+stopfarm2.TextColor3 = Color3.fromRGB(255, 255, 255)
+stopfarm2.TextSize = 18.000
+stopfarm2.MouseButton1Down:connect(function()
+	_G.Stop = true -- false = script is on; true = script is off
+    _G.World = "Tech" -- Worlds: "Fantasy" & "Spawn"
+    _G.Area = "Alien Forest" -- See the above comment and select something..
+    loadstring(game:HttpGet('https://pastebin.com/raw/aFAZb8wz'))()
+end)
+
+autocollect.Name = "autocollect"
+autocollect.Parent = scriptspage
+autocollect.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+autocollect.Position = UDim2.new(0.678278685, 0, 0.261682332, 0)
+autocollect.Size = UDim2.new(0, 150, 0, 34)
+autocollect.Font = Enum.Font.SourceSans
+autocollect.Text = "Collect Coin"
+autocollect.TextColor3 = Color3.fromRGB(255, 255, 255)
+autocollect.TextSize = 18.000
+autocollect.MouseButton1Down:connect(function()
+    col = true
+    while col do task.wait()
+        for i,v in pairs(game:GetService("Workspace")["__THINGS"].Orbs:GetChildren()) do
+            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,0)
+        end
+    end
+end)
+
+autolootbag.Name = "autolootbag"
+autolootbag.Parent = scriptspage
+autolootbag.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+autolootbag.Position = UDim2.new(0.678278685, 0, 0.453271121, 0)
+autolootbag.Size = UDim2.new(0, 150, 0, 34)
+autolootbag.Font = Enum.Font.SourceSans
+autolootbag.Text = "Collect LootBag"
+autolootbag.TextColor3 = Color3.fromRGB(255, 255, 255)
+autolootbag.TextSize = 18.000
+autolootbag.MouseButton1Down:connect(function()
+    _G.lootbags = true
+    while _G.lootbags do task.wait()
+        for i,v in pairs(game:GetService("Workspace")["__THINGS"].Lootbags:GetChildren()) do
+            v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(0,0,0)
+        end
+    end
+end)
+
+antiafk.Name = "antiafk"
+antiafk.Parent = scriptspage
+antiafk.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+antiafk.Position = UDim2.new(0.678278685, 0, 0.658878565, 0)
+antiafk.Size = UDim2.new(0, 150, 0, 34)
+antiafk.Font = Enum.Font.SourceSans
+antiafk.Text = "AntiAFK"
+antiafk.TextColor3 = Color3.fromRGB(255, 255, 255)
+antiafk.TextSize = 18.000
+antiafk.MouseButton1Down:connect(function()
+	local AntiAFK = game:GetService("VirtualUser")
+		AntiAFKT = game:GetService("Players").LocalPlayer.Idled:connect(function()
+			AntiAFK:CaptureController()
+			AntiAFK:ClickButton2(Vector2.new())
+	end)
+end)
+
+antilag.Name = "antilag"
+antilag.Parent = scriptspage
+antilag.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+antilag.Position = UDim2.new(0, 0, 0.836448669, 0)
+antilag.Size = UDim2.new(0, 150, 0, 34)
+antilag.Font = Enum.Font.SourceSans
+antilag.Text = "AntiLagFPS"
+antilag.TextColor3 = Color3.fromRGB(255, 255, 255)
+antilag.TextSize = 18.000
+antilag.MouseButton1Down:connect(function()
+	local decalsyeeted = true -- Leaving this on makes games look shitty but the fps goes up by at least 20.
+		local g = game
+		local w = g.Workspace
+		local l = g.Lighting
+		local t = w.Terrain
+		t.WaterWaveSize = 0
+		t.WaterWaveSpeed = 0
+		t.WaterReflectance = 0
+		t.WaterTransparency = 0
+		l.GlobalShadows = false
+		l.FogEnd = 9e9
+		l.Brightness = 0
+		settings().Rendering.QualityLevel = "Level01"
+		for i,v in pairs(g:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("Union") or v:IsA("MeshPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") and decalsyeeted then 
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then 
+				v.Lifetime = NumberRange.new(0)
+			end
+		end
+end)
+
+gamepassed.Name = "gamepassed"
+gamepassed.Parent = scriptspage
+gamepassed.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+gamepassed.Position = UDim2.new(0.34631148, 0, 0.836448669, 0)
+gamepassed.Size = UDim2.new(0, 150, 0, 34)
+gamepassed.Font = Enum.Font.SourceSans
+gamepassed.Text = "GamePassed"
+gamepassed.TextColor3 = Color3.fromRGB(255, 255, 255)
+gamepassed.TextSize = 18.000
+gamepassed.MouseButton1Down:connect(function()
+	local main = debug.getupvalues(require(game.ReplicatedStorage:WaitForChild("Framework"):WaitForChild("Library")).Save.Get)[2][game.Players.LocalPlayer].save.Gamepasses
+    table.insert(main,18674296)
+    table.insert(main,18674298)
+    table.insert(main,18674321)
+end)
+
+hyperhub.Name = "hyperhub"
+hyperhub.Parent = scriptspage
+hyperhub.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+hyperhub.Position = UDim2.new(0.678278685, 0, 0.836448669, 0)
+hyperhub.Size = UDim2.new(0, 150, 0, 34)
+hyperhub.Font = Enum.Font.SourceSans
+hyperhub.Text = "Hyper Hub"
+hyperhub.TextColor3 = Color3.fromRGB(255, 255, 255)
+hyperhub.TextSize = 18.000
+hyperhub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Shisobad/new/main/script.lua"))()
+end)
+
+
+hubspage.Name = "hubspage"
+hubspage.Parent = main
+hubspage.Active = true
+hubspage.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hubspage.BackgroundTransparency = 1.000
+hubspage.Position = UDim2.new(0, 0, 0.235714287, 0)
+hubspage.Size = UDim2.new(0, 488, 0, 214)
+
+
+dinohub.Name = "dinohub"
+dinohub.Parent = hubspage
+dinohub.BackgroundColor3 = Color3.fromRGB(18, 18, 18)
+dinohub.Position = UDim2.new(0.329918057, 0, 0.261682332, 0)
+dinohub.Size = UDim2.new(0, 142, 0, 34)
+dinohub.Font = Enum.Font.SourceSans
+dinohub.Text = "Dino Hub"
+dinohub.TextColor3 = Color3.fromRGB(255, 255, 255)
+dinohub.TextSize = 18.000
+dinohub.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/1EQmGiQr", true))()
+end)
+
+
+
+bar.Name = "bar"
+bar.Parent = main
+bar.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+bar.Size = UDim2.new(0, 488, 0, 26)
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0163934417, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 93, 0, 26)
+TextLabel.Font = Enum.Font.Ubuntu
+TextLabel.Text = "Sky Hub Beta PetSimX"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+-- Scripts:
+
+local function LDLMGWH_fake_script() -- home.LocalScript 
+	local script = Instance.new('LocalScript', home)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.hometab.Visible = true
+		script.Parent.Parent.scriptspage.Visible = false
+		script.Parent.Parent.hubspage.Visible = false
+	end)
+end
+coroutine.wrap(LDLMGWH_fake_script)()
+local function OJTG_fake_script() -- scripts.LocalScript 
+	local script = Instance.new('LocalScript', scripts)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.scriptspage.Visible = true
+		script.Parent.Parent.hometab.Visible = false
+		script.Parent.Parent.hubspage.Visible = false
+	end)
+end
+coroutine.wrap(OJTG_fake_script)()
+local function ASEUYNU_fake_script() -- hubs.LocalScript 
+	local script = Instance.new('LocalScript', hubs)
+
+	script.Parent.MouseButton1Down:connect(function()
+		script.Parent.Parent.hubspage.Visible = true
+		script.Parent.Parent.scriptspage.Visible = false
+		script.Parent.Parent.hometab.Visible = false
+	end)
+end
+coroutine.wrap(ASEUYNU_fake_script)()
+local function GBKPG_fake_script() -- hometab.LocalScript 
+	local script = Instance.new('LocalScript', hometab)
+
+	local frame = script.Parent
+	
+	
+	
+	local player = game.Players.LocalPlayer
+	
+	
+	
+	local userId = player.UserId
+	
+	local thumbType = Enum.ThumbnailType.AvatarBust
+	
+	local thumbSize = Enum.ThumbnailSize.Size420x420
+	
+	local content, isReady = game.Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+	
+	
+	
+	
+	
+	frame.PlayerImage.Image = content
+	
+end
+coroutine.wrap(GBKPG_fake_script)()
